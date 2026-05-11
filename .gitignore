@@ -1,0 +1,34 @@
+# Rust
+target/
+**/*.rs.bk
+Cargo.lock
+.anchor/
+
+# Node
+node_modules/
+dist/
+.next/
+out/
+*.tsbuildinfo
+
+# Solana / Anchor
+test-ledger/
+.anchor/
+wallet.json
+
+# Env — NEVER commit these
+.env.*.local
+
+# Keypairs — NEVER commit
+*-keypair.json
+id.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+config.bat

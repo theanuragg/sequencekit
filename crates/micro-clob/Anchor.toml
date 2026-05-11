@@ -1,0 +1,22 @@
+[features]
+seeds = true
+skip-lint = false
+
+[programs.localnet]
+micro_clob = "D2hmjC142DkGTZg8u8EXig3Kxci3nU7Qo8WLvwzrfoie"
+
+[programs.devnet]
+micro_clob = "D2hmjC142DkGTZg8u8EXig3Kxci3nU7Qo8WLvwzrfoie"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[workspace]
+members = ["programs/micro-clob"]
+
+[scripts]
+test = "npm install --prefix . && npx ts-mocha -p tsconfig.json -t 1000000 tests/**/*.ts"

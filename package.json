@@ -1,0 +1,27 @@
+{
+  "name": "sequencekit-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:sdk": "npm run build --workspace=packages/sdk",
+    "dev:dashboard": "npm run dev --workspace=apps/dashboard",
+    "build:dashboard": "npm run build --workspace=apps/dashboard",
+    "test:sdk": "npm run test --workspace=packages/sdk",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "description": "> **The first open-source BAM plugin for Solana — giving any DEX Hyperliquid-grade market microstructure without leaving Solana.**",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

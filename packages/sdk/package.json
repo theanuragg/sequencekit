@@ -1,0 +1,54 @@
+{
+  "name": "@sequencekit/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for MakerShield \u2014 Jito BAM plugin enforcing cancel-before-fill ordering on Solana",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@solana/web3.js": "^1.95.0",
+    "bs58": "^6.0.0"
+  },
+  "peerDependencies": {
+    "@solana/web3.js": "^1.x"
+  },
+  "optionalDependencies": {
+    "@jito-labs/shredstream-client": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "solana",
+    "jito",
+    "bam",
+    "mev",
+    "clob",
+    "sequencekit",
+    "maker-shield"
+  ]
+}

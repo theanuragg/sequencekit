@@ -1,0 +1,25 @@
+[package]
+name = "micro-clob"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal on-chain CLOB proving MakerShield cancel-before-fill ordering works"
+
+[profile.release]
+overflow-checks = true
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name       = "micro_clob"
+
+[features]
+default     = []
+cpi         = ["no-entrypoint"]
+no-entrypoint = []
+idl-build   = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl  = { workspace = true }
+
+[dev-dependencies]
+anchor-lang = { workspace = true }
